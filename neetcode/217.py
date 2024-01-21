@@ -38,7 +38,18 @@ class Solution:
             if nums[i] == nums[i-1]:
                 return True
         return False
-    
+
+
+"""
+METHOD 3: Use a hashset to store elements from the array.
+If an element is already in the hashset, the duplicate has been found. Return True.
+Otherwise, add an element to the hashset and continue.
+
+Time complexity: O(n)
+Space complexity: O(n)
+
+This is the most efficient method to check for duplicates.
+"""
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         hashset = set()
