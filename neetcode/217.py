@@ -7,11 +7,11 @@ arr4 = [1]; False
 METHOD 1: This is a bruteforce method where every element is compared with other elements in the array.
 If there are any duplicates found, return true, else return false.
 
-Time Comp: o(n^2)
+Time Comp: O(n^2)
 Space Comp: O(1)
 
 This approach is not efficient because of the time complexity for large arrays.
-o
+
 """
 
 class Solution:
@@ -21,17 +21,22 @@ class Solution:
                 if nums[i] == nums[k]:
                     return True
         return False
-            
 
+"""
+METHOD 2: The array is first sorted in ascending order.
+Then the adjacent elements are compared to check for duplicates.
+If any of the two elements are same, then duplicates are found, so return True. Otherwise, return False.
+
+Time Complexity: O(n log n)
+Space Complexty: O(1)
+
+""" 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        hashset = set()
-        for i in nums:
-            if i in hashset:
+        nums.sort()
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i-1]:
                 return True
-            else:
-                hashset.add(i)
-
         return False
     
 class Solution:
