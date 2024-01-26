@@ -6,7 +6,7 @@ class Solution:
         postfix = 1
         for i in range(len(nums)):
             result[i] = prefix #taking the prefix and putting it in position i in result array
-            prefix *= nums[i] #prefix is multiplied with nums value
+            prefix *= nums[i] #prefix is multiplied with nums value and that value is stored in next index
             
         for i in range(len(nums) - 1, -1, -1):
             result[i] *= postfix #multiply the postfix value with the prefix value stored in result

@@ -41,4 +41,3 @@ class Solution:
             hashT[t[i]] = 1 + hashT.get(t[i], 0)
         
         return hashS == hashT
-        
