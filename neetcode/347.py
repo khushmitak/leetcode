@@ -1,7 +1,7 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        count = {}
-        array = [[] for i in range(len(nums) + 1)]
+        count = {} #count the occurences of each number
+        array = [[] for i in range(len(nums) + 1)] # array to store list of numbers based on count
         
         for n in nums:
             count[n] = 1 + count.get(n, 0)
