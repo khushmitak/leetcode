@@ -1,5 +1,8 @@
 #trapping rain water
 
+#Time complexity: O(n)
+#Space complexity: O(1)
+
 class Solution:
     def trap(self, height: List[int]) -> int:
         if not height: #if no height at all, no rain water is trapped
