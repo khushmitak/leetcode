@@ -37,7 +37,19 @@ class Solution:
         hashT = {}
         
         for i in range(len(s)):
-            hashS[s[i]] = 1 + hashS.get(s[i], 0)
-            hashT[t[i]] = 1 + hashT.get(t[i], 0)
+            char = s[i]
+            if char in hashS:
+                hashS[char] += 1
+            else:
+                hashS[char] = 1
+        
+        for i in range(len(t)):
+            char = t[i]
+            if char in hashT:
+                hashT[char] += 1
+            else:
+                hashT[char] = 1
+    # or can also use: hashS[s[i]] = 1 + hashS.get(s[i], 0)
+    # AND hashT[t[i]] = 1 + hashT.get(t[i], 0)
         
         return hashS == hashT
