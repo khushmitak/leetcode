@@ -1,3 +1,10 @@
+"""
+METHOD: To find the product except itself, we can divide the array into prefix and postfix
+and use the product of prefix and postfix to output an array of products. 
+For this problem, the time complexity: O(n)
+Space complexity: O(1) (as specified in the question)
+"""
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         result = [1] * len(nums) #creating an array of length nums with initial value for all positions = 1
