@@ -24,6 +24,13 @@ class Solution:
                     currentSeq = 1
         return max(currentSeq, longestSeq)
 
+"""
+METHOD 2: Use a set to store all the nums and check if the current element is start of sequence or not.
+If start of sequence, check for consecutive elements and get the longest Seq.
+If not, then continue to next element. 
+Return the max of longest sequence and length of array.
+"""
+
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         numSet =set(nums)
