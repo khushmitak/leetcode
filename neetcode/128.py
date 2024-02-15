@@ -29,6 +29,8 @@ METHOD 2: Use a set to store all the nums and check if the current element is st
 If start of sequence, check for consecutive elements and get the longest Seq.
 If not, then continue to next element. 
 Return the max of longest sequence and length of array.
+Time complexity: O(n)
+Space complexity: O(n)
 """
 
 class Solution:
