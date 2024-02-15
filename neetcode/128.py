@@ -1,3 +1,29 @@
+"""
+METHOD 1: Using sorting method: The array will be sorted. If an empty array, return 0
+If we have more than 1 elements, then compare the elements to see if elements are consecutive or not.
+There may be more than 1 consecutive sequences in the array, so update and return the max of current and longest sequence.
+Time complexity: O(n log n)
+Space complexity: O(1)
+"""
+
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        if not nums: #if the array is empty, return 0
+            return 0
+        
+        nums.sort()
+        currentSeq = 1
+        longestSeq = 1
+
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i-1]: #check if the current element is different from the previous 
+                if nums[i-1] == nums[i] - 1: #check if they are consecutive
+                    currentSeq += 1
+                else: #if not consecutive, update the longestSeq and reset the current sequence
+                    longestSeq = max(currentSeq, longestSeq)
+                    currentSeq = 1
+        return max(currentSeq, longestSeq)
+
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         numSet =set(nums)
