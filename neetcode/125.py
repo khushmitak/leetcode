@@ -12,7 +12,12 @@ class Solution:
         
         return newString == newString[::-1]
 
-#Method 2:
+"""
+Method 2:
+Using two pointers- left and right, compare the characters at that index and increment, decrement accordingly.
+If the character is not alphanumeric, skip that character and compare the next element.
+Return false if the characters are not equal.
+"""
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         left = 0
