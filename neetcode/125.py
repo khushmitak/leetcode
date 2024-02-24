@@ -1,3 +1,7 @@
+"""
+METHOD 1: use an empty string to store only alphanumeric characters.
+Then compare the string from front and backwards.
+"""
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         newString = "" # to store new string with only alphanumeric characters
